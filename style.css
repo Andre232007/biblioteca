@@ -1,0 +1,166 @@
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    animation: backgroundFade 13s infinite alternate; 
+}
+
+
+@keyframes backgroundFade {
+    0% { background: linear-gradient(135deg, #74ebd5, #9face6); }
+    50% { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+    100% { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* hover */
+}
+
+.container:hover {
+    transform: translateY(-5px); 
+    
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #444;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6a6a, #6ab6ff);
+    margin: 10px auto;
+}
+
+.form-section h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-section h2::before {
+
+    position: absolute;
+    left: -30px;
+    font-size: 1.5em;
+    color: #ff6a6a;
+}
+
+
+
+label {
+    display: block;
+    margin: 5px 0;
+    font-size: 1em;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Inputs e Seleções */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #6ab6ff;
+    box-shadow: 0 0 8px rgba(106, 182, 255, 0.6);
+    outline: none;
+}
+
+/* Botões */
+button {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff6a6a, #6ab6ff);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #6ab6ff, #ff6a6a);
+    transform: scale(1.05);
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-row div {
+    flex: 1;
+    min-width: 45%; /* Adaptável ao tamanho da tela */
+}
+
+
+input, select, button {
+    transition: all 0.3s ease;
+}
+
+
+h1, .form-section h2 {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Parallax  */
+/* Parallax Geral */
+.parallax {
+    height: 300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Imagens específicas */
+.parallax-top {
+    background-image: url('beautiful-scenery-rock-formations-by-sea-queens-bath-kauai-hawaii-sunset.jpg'); 
+}
+
+.parallax-middle {
+    background-image: url('lake-surrounded-by-mountains-daytime.jpg'); 
+}
+
+.parallax-bottom {
+    background-image: url('phu-chi-fa-mist-sunrise-chiang-rai-province-thailand.jpg'); 
+}
